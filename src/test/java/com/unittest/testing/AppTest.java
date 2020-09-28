@@ -38,6 +38,24 @@ public class AppTest
     }
     
     @Test
+    public void testResult1Input1() {
+    	double expected = 1;
+    	double input = 1;
+    	object.input(input);
+    	double actual = object.getCelcius();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative11InputNegative1() {
+    	double expected = -1;
+    	double input = -1;
+    	object.input(input);
+    	double actual = object.getCelcius();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
     public void testResult1000Input1000() {
     	double expected = 1000;
     	double input = 1000;
@@ -50,6 +68,24 @@ public class AppTest
     public void testResultNegative1000InputNegative1000() {
     	double expected = -1000;
     	double input = -1000;
+    	object.input(input);
+    	double actual = object.getCelcius();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult999Input999() {
+    	double expected = 999;
+    	double input = 999;
+    	object.input(input);
+    	double actual = object.getCelcius();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative999InputNegative999() {
+    	double expected = -999;
+    	double input = -999;
     	object.input(input);
     	double actual = object.getCelcius();
     	assertEquals(expected, actual,2);
@@ -202,233 +238,156 @@ public class AppTest
     
 //    ------------------------------------------------------ test case expected output //
     
-//    @Test
-//    public void testResultNegative30InputNegative1() {
-//    	double expected = 30.2;
-//    	double input = -1;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual,2);
-//    }
-//    
-//    @Test
-//    public void testResultNegative866InputNegative499() {
-//    	double expected = -866.2;
-//    	double input = -499;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual,2);
-//    }
-//    
-//    @Test
-//    public void testResultNegative868InputNegative500() {
-//    	double expected = -868;
-//    	double input = -500;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultNegative869InputNegative501() {
-//    	double expected = -869.8;
-//    	double input = -501;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultNegative1766InputNegative999() {
-//    	double expected = 1766.2;
-//    	double input = -999;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultNegative1768InputNegative1000() {
-//    	double expected = -1768;
-//    	double input = -1000;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultErrorInputNegative1001() {
-//    	double expected = 1;
-//    	double input = -1001;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultErrorInputNegative1010() {
-//    	double expected = 1;
-//    	double input = -1010;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//   
-//    @Test
-//    public void testResultErrorInputNegative2000() {
-//    	double expected = 1;
-//    	double input = -2000;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult33Input1() {
-//    	double expected = 33.8;
-//    	double input = 1;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult930Input499() {
-//    	double expected = 930.2;
-//    	double input = 499;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult932Input500() {
-//    	double expected = 932;
-//    	double input = 500;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult933Input501() {
-//    	double expected = 933.8;
-//    	double input = 501;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult1830Input999() {
-//    	double expected = 1830.2;
-//    	double input = 999;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResult1832Input1000() {
-//    	double expected = 1832;
-//    	double input = 1000;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultErrorInput1001() {
-//    	double expected = 1;
-//    	double input = 1001;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//    
-//    @Test
-//    public void testResultErrorInput1010() {
-//    	double expected = 1;
-//    	double input = 1010;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
-//   
-//    @Test
-//    public void testResultErrorInput2000() {
-//    	double expected = 1;
-//    	double input = 2000;
-//    	object.input(input);
-//    	double actual = object.getCelcius();
-//    	assertEquals(expected, actual);
-//    }
+    @Test
+    public void testResultNegative30InputNegative1() {
+    	double expected = 30.2;
+    	double input = -1;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative866InputNegative499() {
+    	double expected = -866.2;
+    	double input = -499;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative868InputNegative500() {
+    	double expected = -868;
+    	double input = -500;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative869InputNegative501() {
+    	double expected = -869.8;
+    	double input = -501;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative1766InputNegative999() {
+    	double expected = -1766.20;
+    	double input = -999;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultNegative1768InputNegative1000() {
+    	double expected = -1768;
+    	double input = -1000;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResultMessageOutputInputNegative1000() {
+    	String expected = "-1000 Celcius = -1768 Fahrenhiet";
+    	double input = -1000;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	String actual = object.toString();
+    	assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void testResultErrorInputNegative1010() {
+    	String expected = "-1010 out of range";
+    	double input = -1010;
+    	object.input(input);
+    	String actual = object.messageError();
+    	assertEquals(expected, actual);
+    }
+   
+    @Test
+    public void testResultErrorInputNegative2000() {
+    	String expected = "-2000 out of range";
+    	double input = -2000;
+    	object.input(input);
+    	String actual = object.messageError();
+    	assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void testResult33Input1() {
+    	double expected = 33.8;
+    	double input = 1;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult930Input499() {
+    	double expected = 930.2;
+    	double input = 499;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult932Input500() {
+    	double expected = 932;
+    	double input = 500;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult933Input501() {
+    	double expected = 933.8;
+    	double input = 501;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult1830Input999() {
+    	double expected = 1830.2;
+    	double input = 999;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
+    @Test
+    public void testResult1832Input1000() {
+    	double expected = 1832;
+    	double input = 1000;
+    	object.input(input);
+    	object.tranfromFahrenheit();
+    	double actual = object.getFahrenheit();
+    	assertEquals(expected, actual,2);
+    }
+    
     
     
 //    -------------------------------------------- end expected output //
-    
-    
-    
-    
-    
-//	@Test
-//	  public void testAssertArrayEquals() {
-//		int[] expected = {1,2,3,4,5};
-////	    byte[] expected = "trial".getBytes();
-//	    int[] actual = {2,3,1,4,5};
-//	    assertArrayEquals("failure - byte arrays not same", expected, actual);
-//	  }
-//
-//	  @Test
-//	  public void testAssertEquals() {
-//	    assertEquals("failure - strings are not equal", "text", "text");
-//	  }
-//
-//	  @Test
-//	  public void testAssertFalse() {
-//	    assertFalse("failure - should be false", false);
-//	  }
-//
-//	  @Test
-//	  public void testAssertNotNull() {
-//	    assertNotNull("should not be null", new Object());
-//	  }
-//
-//	  @Test
-//	  public void testAssertNotSame() {
-//	    assertNotSame("should not be same Object", new Object(), new Object());
-//	  }
-////
-//	  @Test
-//	  public void testAssertNull() {
-//	    assertNull("should be null", null);
-//	  }
-////
-//	  @Test
-//	  public void testAssertSame() {
-//	    Integer aNumber = Integer.valueOf(768);
-//	    assertSame("should be same", aNumber, aNumber);
-//	  }
-//
-//	  // JUnit Matchers assertThat
-//	  @Test
-//	  public void testAssertThatBothContainsString() {
-//	    assertThat("albumen", both(containsString("a")).and(containsString("b")));
-//	  }
-//
-//	  @Test
-//	  public void testAssertThatHasItems() {
-//	    assertThat(Arrays.asList("one", "two", "three"), hasItems("one", "three"));
-//	  }
-////
-//	  @Test
-//	  public void testAssertThatEveryItemContainsString() {
-//	    assertThat(Arrays.asList(new String[] { "fun", "ban", "net" }), everyItem(containsString("n")));
-//	  }
-
-//	  @Test
-//	  public void testAssertTrue() {
-//	    assertTrue("failure - should be true", true);
-//	  }
 }
 
